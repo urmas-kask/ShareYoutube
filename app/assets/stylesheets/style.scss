@@ -25,3 +25,23 @@
 .padding-right-10{
     padding-right: 10px;
 }
+.full-width{
+    width: 100%;
+}
+legend.w-auto{
+    width: auto;
+}
+.margin-top-100{
+    margin-top: 100px;
+}
+.movie-title{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+body > .container {
+    min-height: 500px;
+}
+.movie-details {
+    height: 260px;
+}

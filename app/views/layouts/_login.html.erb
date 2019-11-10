@@ -1,0 +1,5 @@
+<%= form_for(:user, url: session_path(:user), html: { class: 'form-inline' } ) do |f| %>
+    <%= f.email_field :email, autocomplete: "email", class: "form-control mb-2 mr-sm-2", placeholder: "Email" %>
+    <%= f.password_field :password, class: "form-control mb-2 mr-sm-2", autocomplete: "current-password", placeholder: "Password" %>
+    <button type="submit" class="btn btn-primary mb-2">Login</button>
+<% end %>

@@ -1,0 +1,17 @@
+<div class="container">
+  <% @movies.each do |movie|%>
+    <div class="row align-items-center my-5">
+      <div class="col-lg-5">
+          <iframe width="450" height="260" src=<%= movie.url %>></iframe>
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5 movie-details">
+          <h3 class="font-weight-light movie-title"><%= movie.title %></h3>
+          <h6>Shared by:  <%= movie.user_email%></h6>
+          <h6>Description:</h6>
+          <p><%= movie.description.truncate(350) %></p>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+  <% end %>
+</div>

@@ -11,17 +11,14 @@
                 <li class="nav-item user-info">
                     <%= "Welcome #{current_user.email}" %>
                 </li>
-                <li class="padding-right-10"><button class="btn btn-outline-secondary">Share a movie</button></li>
+                <li class="padding-right-10">
+                    <%= link_to 'Share a movie', new_movie_path, class: "btn btn-outline-secondary" %>
                 <li>
                     <%= link_to 'Log Out', destroy_user_session_path, method: :delete,  class: "btn btn-outline-secondary" %>
                 </li>
                 <% else %>
                     <li class="nav-item active">
-                        <%= form_for(:user, url: session_path(:user), html: { class: 'form-inline' } ) do |f| %>
-                            <%= f.email_field :email, autocomplete: "email", class: "form-control mb-2 mr-sm-2", placeholder: "Email" %>
-                            <%= f.password_field :password, class: "form-control mb-2 mr-sm-2", autocomplete: "current-password", placeholder: "Password" %>
-                            <button type="submit" class="btn btn-primary mb-2">Login</button>
-                        <% end %>
+                        <%= render partial: "layouts/login"%>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/users/sign_up">Register</a>
