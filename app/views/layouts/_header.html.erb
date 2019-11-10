@@ -8,14 +8,15 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <% if current_user %>
-                <li class="nav-item user-info">
-                    <%= "Welcome #{current_user.email}" %>
-                </li>
-                <li class="padding-right-10">
-                    <%= link_to 'Share a movie', new_movie_path, class: "btn btn-outline-secondary" %>
-                <li>
-                    <%= link_to 'Log Out', destroy_user_session_path, method: :delete,  class: "btn btn-outline-secondary" %>
-                </li>
+                    <h1> Test </h1>
+                    <li class="nav-item user-info">
+                        <%= "Welcome #{current_user.email}" %>
+                    </li>
+                    <li class="padding-right-10">
+                        <%= link_to 'Share a movie', new_movie_path, class: "btn btn-outline-secondary" %>
+                    <li>
+                        <%= link_to 'Log Out', destroy_user_session_path, method: :delete,  class: "btn btn-outline-secondary" %>
+                    </li>
                 <% else %>
                     <li class="nav-item active">
                         <%= render partial: "layouts/login"%>
